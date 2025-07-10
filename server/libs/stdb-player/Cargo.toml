@@ -18,3 +18,13 @@ stdb-common = "^0.1"
 spacetimedb.workspace = true
 log.workspace = true
 thiserror.workspace = true
+
+[features]
+default = ["vip"]
+
+# Enable this feature to include VIP features
+vip = []
+
+# Warning, this feature is not secure.
+# Enable this feature to allow sign_in using device_id
+auth_device_id = []

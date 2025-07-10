@@ -10,6 +10,11 @@ This is a SpacetimeDB library collection providing server-side utilities and fut
 - Use `#[must_use]` for validation functions
 - Write comprehensive unit tests for all public functions
 
+## Tables naming convention
+- Starts with stdb_ to avoid conflict with other tables
+- Determine the visibility scope: pub (everyone can see), own (only owners can see), priv (only visible to the server)
+- End with version number to follow guidelines
+
 ## Architecture Guidelines
 - Keep validation logic in `stdb-common`
 - Player-specific logic goes in `stdb-player`
