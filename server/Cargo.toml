@@ -1,0 +1,17 @@
+[workspace]
+resolver = "2"
+members = [
+    "bins/*",
+    "libs/*",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+authors = ["Rafael Guerreiro"]
+license = "MIT"
+
+[workspace.dependencies]
+spacetimedb = { version = "^1.2", features = ["unstable"]}
+log = "^0.4"
+thiserror = "^2.0"

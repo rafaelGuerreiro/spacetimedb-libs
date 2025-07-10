@@ -1,0 +1,11 @@
+edition = "2024"
+max_width = 128
+newline_style = "Unix"
+tab_spaces = 4
+hard_tabs = false
+use_field_init_shorthand = true
+use_try_shorthand = true
+reorder_imports = true
+reorder_modules = true
+match_block_trailing_comma = true
+imports_granularity = "Crate"

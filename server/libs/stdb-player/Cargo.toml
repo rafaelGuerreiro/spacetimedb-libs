@@ -1,0 +1,13 @@
+[package]
+name = "stdb-player"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+stdb-common = { path = "../stdb-common" }
+
+spacetimedb.workspace = true
+log.workspace = true
+thiserror.workspace = true

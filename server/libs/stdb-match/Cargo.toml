@@ -1,0 +1,14 @@
+[package]
+name = "stdb-match"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+stdb-common = { path = "../stdb-common" }
+stdb-player = { path = "../stdb-player" }
+
+spacetimedb.workspace = true
+log.workspace = true
+thiserror.workspace = true
