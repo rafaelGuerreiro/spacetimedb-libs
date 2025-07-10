@@ -11,7 +11,3 @@ This library provides basic player logic for the SpacetimeDB ecosystem. It inclu
 This library depends on:
 - `stdb-common`: Shared utilities and validation logic.
 - `spacetimedb`: Core framework for SpacetimeDB.
-
-## License
-
-This project is licensed under the terms of the MIT license. See the LICENSE file for details.

@@ -1,10 +1,9 @@
-use std::fmt::Display;
-
 use crate::{
     error::{ErrorMapper, ServiceError, ServiceResult},
     uuid::Uuid,
 };
 use spacetimedb::ReducerContext;
+use std::fmt::Display;
 use thiserror::Error;
 
 #[must_use]
@@ -23,8 +22,38 @@ pub fn validate_str(name: impl Display, value: &str, min_length: u64, max_length
 
 #[must_use]
 pub fn validate_uuid(name: impl Display, uuid: &Uuid) -> ServiceResult<()> {
-    // TODO unimplemented
-    unimplemented!("validate size, dashes, and if it's not nil/max")
+    // Check if UUID has correct length (36 characters: 8-4-4-4-12)
+    if uuid.len() != 36 {
+        return Err(ValidationError::invalid_uuid(name));
+    }
+
+    // Check if dashes are in correct positions
+    let chars: Vec<char> = uuid.to_lowercase().chars().collect();
+    if chars[8] != '-' || chars[13] != '-' || chars[18] != '-' || chars[23] != '-' {
+        return Err(ValidationError::invalid_uuid(name));
+    }
+
+    // Check if all other characters are valid hex digits
+    for (i, &ch) in chars.iter().enumerate() {
+        if i == 8 || i == 13 || i == 18 || i == 23 {
+            continue; // Skip dash positions
+        }
+        if !ch.is_ascii_hexdigit() {
+            return Err(ValidationError::invalid_uuid(name));
+        }
+    }
+
+    // Check if it's not nil UUID (all zeros)
+    if uuid == "00000000-0000-0000-0000-000000000000" {
+        return Err(ValidationError::invalid_uuid(name));
+    }
+
+    // Check if it's not max UUID (all f's)
+    if uuid == "ffffffff-ffff-ffff-ffff-ffffffffffff" {
+        return Err(ValidationError::invalid_uuid(name));
+    }
+
+    Ok(())
 }
 
 macro_rules! impl_validate_numeric {
