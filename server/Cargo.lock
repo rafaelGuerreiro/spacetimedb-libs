@@ -669,12 +669,23 @@ dependencies = [
 ]
 
 [[package]]
+name = "stdb-common"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fd4fcef5c0ed0a253f8d0c11bda6ee1cb09c1b4767223db0b299d582f13ee6fc"
+dependencies = [
+ "log",
+ "spacetimedb",
+ "thiserror 2.0.12",
+]
+
+[[package]]
 name = "stdb-http"
 version = "0.1.0"
 dependencies = [
  "log",
  "spacetimedb",
- "stdb-common",
+ "stdb-common 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "thiserror 2.0.12",
 ]
 
@@ -684,8 +695,7 @@ version = "0.1.0"
 dependencies = [
  "log",
  "spacetimedb",
- "stdb-common",
- "stdb-player",
+ "stdb-common 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "thiserror 2.0.12",
 ]
 
@@ -695,8 +705,7 @@ version = "0.1.0"
 dependencies = [
  "log",
  "spacetimedb",
- "stdb-common",
- "stdb-player",
+ "stdb-common 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "thiserror 2.0.12",
 ]
 
@@ -706,7 +715,7 @@ version = "0.1.0"
 dependencies = [
  "log",
  "spacetimedb",
- "stdb-common",
+ "stdb-common 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "thiserror 2.0.12",
 ]
 

@@ -13,8 +13,8 @@ keywords.workspace = true
 categories.workspace = true
 
 [dependencies]
-stdb-common = { path = "../stdb-common" }
-stdb-player = { path = "../stdb-player" }
+stdb-common = "^0.1"
+# stdb-player = "^0.1"
 
 spacetimedb.workspace = true
 log.workspace = true
