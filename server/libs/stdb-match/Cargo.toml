@@ -1,9 +1,16 @@
 [package]
 name = "stdb-match"
+description = "Core utilities and common functionality for SpacetimeDB-based game development."
+readme = "README.md"
+documentation = "https://github.com/rafaelGuerreiro/spacetimedb-libs/tree/main/server/libs/stdb-match"
 version.workspace = true
 edition.workspace = true
+homepage.workspace = true
+repository.workspace = true
 authors.workspace = true
 license.workspace = true
+keywords.workspace = true
+categories.workspace = true
 
 [dependencies]
 stdb-common = { path = "../stdb-common" }

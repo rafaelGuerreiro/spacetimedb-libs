@@ -1,6 +1,6 @@
 [package]
-name = "stdb-common"
-description = "Core utilities and common functionality for SpacetimeDB-based game development."
+name = "stdb-backend-server"
+description = "A backend server deployed elsewhere that will connect to your SpaceTimeDB and perform admin operations."
 readme = "README.md"
 documentation = "https://github.com/rafaelGuerreiro/spacetimedb-libs/tree/main/server/libs/stdb-common"
 version.workspace = true
@@ -13,6 +13,4 @@ keywords.workspace = true
 categories.workspace = true
 
 [dependencies]
-spacetimedb.workspace = true
-log.workspace = true
-thiserror.workspace = true
+tokio = "^1.46"
