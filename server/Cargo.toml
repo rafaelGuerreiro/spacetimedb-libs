@@ -12,8 +12,8 @@ homepage = "https://github.com/rafaelGuerreiro/spacetimedb-libs"
 repository = "https://github.com/rafaelGuerreiro/spacetimedb-libs"
 authors = ["Rafael Guerreiro"]
 license = "MIT"
-keywords = ["spacetimedb", "game"]
-categories = ["game"]
+keywords = ["spacetimedb", "game-development"]
+categories = ["game-development"]
 
 [workspace.dependencies]
 spacetimedb = { version = "^1.2", features = ["unstable"]}
