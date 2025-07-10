@@ -696,11 +696,23 @@ dependencies = [
  "log",
  "spacetimedb",
  "stdb-common 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "stdb-player 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "thiserror 2.0.12",
 ]
 
 [[package]]
 name = "stdb-match"
+version = "0.1.0"
+dependencies = [
+ "log",
+ "spacetimedb",
+ "stdb-common 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "stdb-player 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "thiserror 2.0.12",
+]
+
+[[package]]
+name = "stdb-player"
 version = "0.1.0"
 dependencies = [
  "log",
@@ -712,6 +724,8 @@ dependencies = [
 [[package]]
 name = "stdb-player"
 version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "69450898debde2086af2dedf38909f9c959eebb06a0fdec897532f0bc043a00a"
 dependencies = [
  "log",
  "spacetimedb",
